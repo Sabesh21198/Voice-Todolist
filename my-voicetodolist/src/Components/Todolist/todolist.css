@@ -1,0 +1,76 @@
+.tasklist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border-top: 2px solid rgba(0,0,0, 0.1);
+    padding: 30px;
+}
+
+.tasklist ul{
+    list-style: none;
+    width: 70%;
+}
+
+.tasklist ul li{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 14px;
+    font-weight: bolder;
+    transition: .4s;
+    user-select: none;
+}
+
+.tasklist ul li:hover{
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.tasklist ul li .iscomplete{
+    visibility: visible;
+    color: rgb(67, 155, 67);
+    margin-right: 10px;
+}
+
+.tasklist ul li .checkicon{
+    visibility: hidden;
+    color: rgb(67, 155, 67);
+    margin-right: 10px;
+}
+
+.tasklist ul li p.taskcomplete{
+    text-decoration: line-through;
+}
+
+.tasklist ul li .edit,  .tasklist ul li .delete{
+    margin-left: 10px;
+}
+
+.tasklist ul li .edit:hover{
+    background-color: rgb(7, 94, 233);
+    color: #fff;
+}
+
+.tasklist ul li .delete:hover{
+    background-color: red;
+    color: #fff;
+}
+
+.tasklist ul li:nth-child(odd){
+    background: linear-gradient(130deg, rgb(26, 148, 22),rgb(251, 255, 0), rgb(250, 248, 248) );
+    animation: changebg 8s linear .20s infinite;
+}
+
+@keyframes changebg{
+    0%{
+    background-position: 10% 0%;
+    }
+    50%{
+    background-position: 91% 100%;
+    }
+    100%{
+    background-position: 10% 0%;
+    }
+    }
